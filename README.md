@@ -16,10 +16,15 @@ Both the Redux core library and most of the Redux documentation are unopinionate
 
 ## Redux Style Guide
 
+- Put as Much Logic as Possible in Reducers
+- Organize State Structure Based on Data Types, Not Components
+- Normalize Complex Nested/Relational State
+- Connect More Components to Read Data from the Store
+
 
 ## Redux-Toolkit Best Practices
 
-**``createEntityAdapter``  (Strong recommend)**
+**``createEntityAdapter``**
 
 A function that generates a set of prebuilt reducers and selectors for performing CRUD operations on a normalized state structure containing instances of a particular type of data object.
 
@@ -32,10 +37,9 @@ import {
     configureStore,
 } from '@reduxjs/toolkit'
 
+// *Area (1)*: Config slice 
 const booksAdapter = createEntityAdapter({
-    // Assume IDs are stored in a field other than `book.id`
     selectId: (book) => book.bookId,
-    // Keep the "all IDs" array sorted based on book titles
     sortComparer: (a, b) => a.title.localeCompare(b.title),
 })
 
@@ -43,7 +47,6 @@ const initField = {
     isLoading: false,
     error: null,
 }
-
 const initialState = booksAdapter.getInitialState(initField)
 
 const booksSlice = createSlice({
@@ -54,19 +57,13 @@ const booksSlice = createSlice({
 })
 
 const { actions, reducer } = booksSlice
-
 export const {} = actions
-
 export default reducer
 
-// Selector Function
+// *Area (2)*: Selector Function
 const booksSelectors = booksAdapter.getSelectors((state) => state.books)
 const allBooks = booksSelectors.selectAll(store.getState())
-export 
-````
-**CRUD functions**
 
-* addMany: ````bookAdater.addMany(state, data)```` .
-````javascript
-data  
+// *Area (3)*: Other Such as formatting,...
+
 ````
