@@ -1,5 +1,5 @@
 # Redux/Redux Toolkit: Best Practices
-#### author
+#### author: Abraham Lawson
 
 [![](https://redux.js.org/img/redux-logo-landscape.png)](https://redux.js.org/style-guide/style-guide)
 
@@ -17,11 +17,11 @@ Both the Redux core library and most of the Redux documentation are unopinionate
 ## Redux Style Guide
 
 
-## Redux Tool-Kit Best Practices
+## Redux-Toolkit Best Practices
 
-**``createEntityAdapter``  (*Strong recommend*)**
+**``createEntityAdapter``  (Strong recommend)**
 
-    > A function that generates a set of prebuilt reducers and selectors for performing CRUD operations on a normalized state structure containing instances of a particular type of data object.
+A function that generates a set of prebuilt reducers and selectors for performing CRUD operations on a normalized state structure containing instances of a particular type of data object.
 
 **Example**
 
