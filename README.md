@@ -1,5 +1,5 @@
 ---
-title : Redux/Redux Toolkit: Best Practices
+title : Best Practices Redux
 createdAt: April 24 2021
 ---
 # Redux/Redux Toolkit: Best Practices
