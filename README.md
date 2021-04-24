@@ -1,9 +1,10 @@
+# Redux/Redux Toolkit: Best Practices
+#### author: Abraham Lawson
+
 ---
 title : Best Practices Redux
 createdAt: April 24 2021
 ---
-# Redux/Redux Toolkit: Best Practices
-#### author: Abraham Lawson
 
 [![](https://redux.js.org/img/redux-logo-landscape.png)](https://redux.js.org/style-guide/style-guide)
 
